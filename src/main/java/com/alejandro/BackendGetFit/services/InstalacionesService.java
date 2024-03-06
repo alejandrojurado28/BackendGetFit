@@ -11,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class InstalacionesServices {
+public class InstalacionesService {
     
     private final InstalacionesRepository instalacionesRepository;
 
