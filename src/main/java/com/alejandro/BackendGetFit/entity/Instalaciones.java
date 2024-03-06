@@ -22,4 +22,5 @@ public class Instalaciones {
 
     private String nombre;
     private String descripcion;
+    private String imagen;
 }
