@@ -24,4 +24,14 @@ public class MonitorController {
         monitorService.createMonitor(monitor);
     }
 
+    @PutMapping("/{id}")
+    public void updateMonitor(@PathVariable Long id, @RequestBody Monitor monitor) {
+        monitorService.updateMonitor(id, monitor);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteMonitor(@PathVariable Long id) {
+        monitorService.deleteMonitor(id);
+    }
+
 }

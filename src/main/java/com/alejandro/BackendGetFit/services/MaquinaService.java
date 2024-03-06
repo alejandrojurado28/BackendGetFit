@@ -21,4 +21,13 @@ public class MaquinaService {
         return maquinaRepository.findAll();
     }
 
+    public void updateMaquina(Long id, Maquina maquina) {
+        maquina.setId(id);
+        maquinaRepository.save(maquina);
+    }
+
+    public void deleteMaquina(Long id) {
+        maquinaRepository.deleteById(id);
+    }
+
 }

@@ -23,4 +23,14 @@ public class MaquinaController {
     public void createMaquina(@RequestBody Maquina maquina) {
         maquinaService.createMaquina(maquina);
     }
+
+    @PutMapping("/{id}")
+    public void updateMaquina(@PathVariable Long id, @RequestBody Maquina Maquina) {
+        maquinaService.updateMaquina(id, Maquina);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteMaquina(@PathVariable Long id) {
+        maquinaService.deleteMaquina(id);
+    }
 }

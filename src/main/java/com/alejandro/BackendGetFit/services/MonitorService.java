@@ -21,4 +21,13 @@ public class MonitorService {
         return monitorRepository.findAll();
     }
 
+    public void updateMonitor(Long id, Monitor monitor) {
+        monitor.setId(id);
+        monitorRepository.save(monitor);
+    }
+
+    public void deleteMonitor(Long id) {
+        monitorRepository.deleteById(id);
+    }
+
 }
