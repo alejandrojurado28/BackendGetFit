@@ -20,6 +20,7 @@ public class Pregunta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String usuario;
     private String asunto;
     private String pregunta;
 
