@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/monitores")
+@CrossOrigin(origins = {"http://localhost:4200"})
 public class MonitorController {
 
     private final MonitorService monitorService;

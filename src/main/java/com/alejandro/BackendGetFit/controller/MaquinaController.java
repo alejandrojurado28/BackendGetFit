@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/maquinas")
+@CrossOrigin(origins = {"http://localhost:4200"})
 public class MaquinaController {
 
     private final MaquinaService maquinaService;
