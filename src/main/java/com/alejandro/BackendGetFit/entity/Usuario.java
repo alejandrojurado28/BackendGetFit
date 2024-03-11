@@ -28,5 +28,6 @@ public class Usuario {
     private int edad;
     private int altura;
     private int peso;
+    private String rol;
     
 }
