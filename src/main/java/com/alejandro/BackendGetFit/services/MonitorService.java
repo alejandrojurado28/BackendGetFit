@@ -14,7 +14,7 @@ public class MonitorService {
     private final MonitorRepository monitorRepository;
 
     public void createMonitor(Monitor monitor) {
-        monitorRepository.save((monitor));
+        monitorRepository.save(monitor);
     }
 
     public List<Monitor> getAllMonitores() {
