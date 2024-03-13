@@ -20,7 +20,6 @@ public class Monitor {
     private String nombre;
     private String descripcion;
 
-    @Lob
-    private byte[] imagen;
+    private String imagen;
 
 }
