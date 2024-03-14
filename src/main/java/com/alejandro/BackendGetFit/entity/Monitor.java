@@ -19,7 +19,6 @@ public class Monitor {
 
     private String nombre;
     private String descripcion;
-
     private String imagen;
 
 }
