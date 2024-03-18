@@ -41,7 +41,7 @@ import com.alejandro.BackendGetFit.entity.Instalaciones;
             clasesService.updateClases(id, clase);
         }
 
-        @DeleteMapping("{/id}")
+        @DeleteMapping("/{id}")
         public void deleteClases(@PathVariable Long id) {
             clasesService.deleteClases(id);
         }

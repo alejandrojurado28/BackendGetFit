@@ -1,5 +1,7 @@
 package com.alejandro.BackendGetFit.entity;
 
+import java.sql.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,6 +22,8 @@ public class Clases {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String fechaInicio;
+    private String fechaFinal;
     private String nombre;
     private String descripcion;
     private String alumnos;
