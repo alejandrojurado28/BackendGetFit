@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ClasesService {
     
-    private ClasesRepository clasesRepository;
+    private final ClasesRepository clasesRepository;
 
     public List<Clases> getAllClases() {
         return clasesRepository.findAll();
@@ -25,8 +25,10 @@ public class ClasesService {
     }
 
     public void updateClases(long id, Clases clase) {
-        clase.setId(id);
-        clasesRepository.save(clase);
+        Clases existingClase = clasesRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Clase no encontrada"));
+        existingClase.setAlumnos(clase.getAlumnos());
+        clasesRepository.save(existingClase);
     }
 
     public void deleteClases(Long id) {

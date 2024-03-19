@@ -1,7 +1,9 @@
 package com.alejandro.BackendGetFit.entity;
 
 import java.sql.Date;
+import java.util.*;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,9 +24,11 @@ public class Clases {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String fechaInicio;
-    private String fechaFinal;
+    private Date fechaInicio;
+    private Date fechaFinal;
     private String nombre;
     private String descripcion;
-    private String alumnos;
+    
+    @ElementCollection
+    private List<String> alumnos;
 }

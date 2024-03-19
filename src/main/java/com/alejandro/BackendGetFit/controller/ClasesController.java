@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
     import org.springframework.web.bind.annotation.RestController;
 
 import com.alejandro.BackendGetFit.entity.Clases;
-import com.alejandro.BackendGetFit.entity.Instalaciones;
-    import com.alejandro.BackendGetFit.services.ClasesService;
+import com.alejandro.BackendGetFit.services.ClasesService;
 
     import lombok.RequiredArgsConstructor;
 
@@ -24,7 +23,7 @@ import com.alejandro.BackendGetFit.entity.Instalaciones;
     @CrossOrigin(origins = {"http://localhost:4200"})
     public class ClasesController {
         
-        private ClasesService clasesService;
+        private final ClasesService clasesService;
 
         @GetMapping
         public List<Clases> getAllClases() {
